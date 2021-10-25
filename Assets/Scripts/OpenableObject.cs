@@ -13,16 +13,20 @@ public class OpenableObject : MonoBehaviour
     [SerializeField] private Axis Axis;
     [SerializeField] private float Angle;
     [SerializeField] private float InteractSpeed;
+    [SerializeField] private AudioClip OpenSound;
+    [SerializeField] private AudioClip CloseSound;
 
 
     Vector3 axis = Vector3.zero;
     private bool isOpen;
     private bool isMoving;
     private float currentAngle = 0;
-
+    private AudioSource source;
 
     void Start()
     {
+        source = gameObject.GetComponent<AudioSource>();
+
         isOpen = false;
 
         switch (Axis)
@@ -50,9 +54,17 @@ public class OpenableObject : MonoBehaviour
         if (!EventSystem.current.IsPointerOverGameObject())
         {
             if (isOpen)
+            {
+                if(OpenSound != null)
+                    source.PlayOneShot(CloseSound);
                 StartCoroutine(Close());
+            }
             else
+            {
+                if (CloseSound != null)
+                    source.PlayOneShot(OpenSound);
                 StartCoroutine(Open());
+            }
         }
     }
 

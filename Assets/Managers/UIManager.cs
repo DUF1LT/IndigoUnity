@@ -6,7 +6,13 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject GeneralUI;
     [SerializeField] GameObject ComputerUI;
+    [SerializeField] AudioClip ClickSound;
+    private AudioSource source;
 
+    void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
     public void OpenComputerUI()
     {
         GeneralUI.gameObject.SetActive(false);
@@ -17,5 +23,7 @@ public class UIManager : MonoBehaviour
     {
         GeneralUI.gameObject.SetActive(true);
         ComputerUI.gameObject.SetActive(false);
+        source.PlayOneShot(ClickSound);
+
     }
 }
