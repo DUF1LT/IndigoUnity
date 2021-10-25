@@ -55,6 +55,9 @@
   <ItemGroup>
     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\Managers\CameraManager.cs" />
+    <Compile Include="Assets\Managers\UIManager.cs" />
+    <Compile Include="Assets\Scripts\OpenComputerUI.cs" />
+    <Compile Include="Assets\Scripts\TurnOnComputer.cs" />
     <Compile Include="Assets\Scripts\OnUIHighlightObject.cs" />
     <Compile Include="Assets\Managers\TaskManager.cs" />
     <Compile Include="Assets\Scripts\HighlightedObject.cs" />
@@ -62,14 +65,11 @@
     <Compile Include="Assets\Scripts\OpenableObject.cs" />
     <Compile Include="Assets\Scripts\InsertableObject.cs" />
     <Compile Include="Assets\Managers\SimulatorManagers.cs" />
-    <Compile Include="Assets\Managers\UIManager.cs" />
-    <Compile Include="Assets\Scripts\OpenComputerUI.cs" />
-    <Compile Include="Assets\Scripts\TurnOnComputer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
     <None Include="Assets\QuickOutline\Readme.txt" />
-    <None Include="Assets\TasksText\Tasks.txt" />
+    <None Include="Assets\Resources\Tasks.txt" />
     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -297,12 +297,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.17f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.17f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.17f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

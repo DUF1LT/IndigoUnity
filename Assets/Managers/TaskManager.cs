@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using System.Linq;
 
 public class TaskManager : MonoBehaviour
 {
@@ -13,21 +14,13 @@ public class TaskManager : MonoBehaviour
 
     private List<string> TasksText = new List<string>();
 
-    void Awake()
+    void Start()
     {
-        string path = Application.dataPath + "/TasksText/Tasks.txt";
-        using (StreamReader reader = new StreamReader(path))
-        {
-            while (!reader.EndOfStream)
-                TasksText.Add(reader.ReadLine());
-        }
+        TextAsset text = Resources.Load("Tasks") as TextAsset;
+        if(text != null)
+            TasksText = text.text.Split('\n').ToList();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void ChangeTask(int index)
     {
