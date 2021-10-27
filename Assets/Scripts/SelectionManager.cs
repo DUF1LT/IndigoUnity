@@ -5,25 +5,26 @@ using UnityEngine;
 public class SelectionManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> Images;
+    [SerializeField] private List<Texture> Textures;
 
-    public GameObject CurrentSelection;
+    [HideInInspector]
+    public Texture CurrentSelection;
 
     void Start()
     {
-        CurrentSelection = null;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<RectTransform>().transform.position = Images[0].transform.GetComponent<RectTransform>().position;
     }
 
     public void ChangeSelectionTo(GameObject GameObject)
     {
         gameObject.SetActive(true);
         gameObject.GetComponent<RectTransform>().transform.position = GameObject.transform.GetComponent<RectTransform>().position;
-        CurrentSelection = gameObject;
+        CurrentSelection = Textures[Images.IndexOf(Images.Find(p => p == GameObject))];
     }
 
     public void ClearSelection()
     {
-        CurrentSelection = null;
         gameObject.SetActive(false);
     }
+
 }

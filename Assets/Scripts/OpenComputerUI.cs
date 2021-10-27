@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class OpenComputerUI : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class OpenComputerUI : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (computer.IsComputerOn)
+        if (computer.IsComputerOn && !EventSystem.current.IsPointerOverGameObject())
             ui.OpenComputerUI();
     }
 

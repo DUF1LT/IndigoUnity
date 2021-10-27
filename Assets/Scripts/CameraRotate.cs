@@ -18,66 +18,65 @@ public class CameraRotate : MonoBehaviour
     [SerializeField] float minY;
 
     private float mouseY = 0;
-    private float minDistance = 5f;
-    private bool isRotating;
-    //private float angleOffset = 3f;
-    //private float rotationSpeed = 2.5f;
-    void Start()
-    {
-        transform.LookAt(TargetPosition.position);
-    }
+    private float minDistance = 3f;
+
+    [HideInInspector]
+    public bool isInUI = false;
 
     void FixedUpdate()
     {
 
-
-        if (Input.GetMouseButton(1))
+        if (!isInUI)
         {
-            mouseY -= Input.GetAxis("Mouse Y");
-
-            ChangeDropdown();
-
-            transform.RotateAround(transform.position, Vector3.up, Input.GetAxis("Mouse X") * MouseSensitivity);
-            transform.localEulerAngles = new Vector3(Mathf.Clamp(mouseY, -5, 20), transform.localEulerAngles.y,
-                transform.localEulerAngles.z);
-        }
-
-        if (transform.position.x < minX)
-            transform.position = new Vector3(minX, transform.position.y, transform.position.z);
-
-        if(transform.position.y < minY)
-            transform.position = new Vector3(transform.position.x, minY, transform.position.z);
-
-        if (transform.position.y > maxY)
-            transform.position = new Vector3(transform.position.x, maxY, transform.position.z);
-
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        if (x != 0 || y != 0)
-        {
-            Vector3 newPos = transform.position +
-                             (transform.TransformDirection(new Vector3(x, 0, 0)) + Vector3.up * y) / KeyboardSensitivity;
-
-            if (ControlDistance(Vector3.Distance(newPos, TargetPosition.position)))
+            if (Input.GetMouseButton(1))
             {
+                mouseY -= Input.GetAxis("Mouse Y");
+
                 ChangeDropdown();
 
-                transform.position = newPos;
+                transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * MouseSensitivity, Space.World);
+                transform.localEulerAngles = new Vector3(Mathf.Clamp(mouseY, -5, 20), transform.localEulerAngles.y,
+                    transform.localEulerAngles.z);
             }
-        }
 
-        float scroll = Input.GetAxis("Mouse ScrollWheel");
-        if (scroll != 0)
-        {
-            Vector3 newPos = transform.position +
-                             (transform.TransformDirection(Vector3.forward * scroll * ScrollSpeed));
+            if (transform.position.x < minX)
+                transform.position = new Vector3(minX, transform.position.y, transform.position.z);
 
-            if (ControlDistance(Vector3.Distance(newPos, TargetPosition.position)))
+            if (transform.position.y < minY)
+                transform.position = new Vector3(transform.position.x, minY, transform.position.z);
+
+            if (transform.position.y > maxY)
+                transform.position = new Vector3(transform.position.x, maxY, transform.position.z);
+
+            float x = Input.GetAxis("Horizontal");
+            float y = Input.GetAxis("Vertical");
+            if (x != 0 || y != 0)
             {
-                ChangeDropdown();
+                Vector3 newPos = transform.position +
+                                 (transform.TransformDirection(new Vector3(x, 0, 0)) + Vector3.up * y) /
+                                 KeyboardSensitivity;
 
-                transform.position = newPos;
+                if (ControlDistance(Vector3.Distance(newPos, TargetPosition.position)))
+                {
+                    ChangeDropdown();
 
+                    transform.position = newPos;
+                }
+            }
+
+            float scroll = Input.GetAxis("Mouse ScrollWheel");
+            if (scroll != 0)
+            {
+                Vector3 newPos = transform.position +
+                                 (transform.TransformDirection(Vector3.forward * scroll * ScrollSpeed));
+
+                if (ControlDistance(Vector3.Distance(newPos, TargetPosition.position)))
+                {
+                    ChangeDropdown();
+
+                    transform.position = newPos;
+
+                }
             }
         }
     }

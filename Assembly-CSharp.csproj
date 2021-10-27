@@ -66,10 +66,11 @@
     <Compile Include="Assets\Scripts\CameraRotate.cs" />
     <Compile Include="Assets\Scripts\OpenableObject.cs" />
     <Compile Include="Assets\Scripts\SelectionManager.cs" />
+    <Compile Include="Assets\Managers\IndigoManager.cs" />
     <Compile Include="Assets\Scripts\InsertableObject.cs" />
     <Compile Include="Assets\Managers\SimulatorManagers.cs" />
     <Compile Include="Assets\Managers\TaskDropdownManager.cs" />
-    <Compile Include="Assets\Managers\IndigoManager.cs" />
+    <Compile Include="Assets\Scripts\FinalImage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

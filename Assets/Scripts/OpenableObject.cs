@@ -55,14 +55,11 @@ public class OpenableObject : MonoBehaviour
         {
             if (isOpen)
             {
-                if(OpenSound != null)
-                    source.PlayOneShot(CloseSound);
                 StartCoroutine(Close());
             }
             else
             {
-                if (CloseSound != null)
-                    source.PlayOneShot(OpenSound);
+               
                 StartCoroutine(Open());
             }
         }
@@ -74,6 +71,9 @@ public class OpenableObject : MonoBehaviour
             yield break;
 
         isMoving = true;
+
+        if (CloseSound != null)
+            source.PlayOneShot(OpenSound);
 
         while (Angle - currentAngle > 1f)
         {
@@ -94,6 +94,9 @@ public class OpenableObject : MonoBehaviour
             yield break;
 
         isMoving = true;
+
+        if (OpenSound != null)
+            source.PlayOneShot(CloseSound);
 
         while (currentAngle - 0 > 1f)
         {

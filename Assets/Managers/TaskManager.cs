@@ -45,6 +45,10 @@ public class TaskManager : MonoBehaviour
             if (!TasksConditions[CurrentTaskIndex - 1][0])
             {
                 TaskDropdown.value = CurrentTaskIndex - 1;
+                if (indigoManager.IsPrintStarted)
+                {
+                    indigoManager.StopPrint();
+                }
             }
         }
     }
@@ -53,8 +57,8 @@ public class TaskManager : MonoBehaviour
     {
         TasksConditions.Clear();
 
-        TasksConditions.Add(new List<bool> {true, indigoManager.ComputerButton.IsComputerOn});
-        
+        TasksConditions.Add(new List<bool> { true, indigoManager.ComputerButton.IsComputerOn });
+
         var tempList = new List<bool>();
         tempList.Add(TasksConditions[0].TrueForAll(p => p));
 
@@ -63,8 +67,10 @@ public class TaskManager : MonoBehaviour
 
         TasksConditions.Add(tempList);
         TasksConditions.Add(new List<bool> { TasksConditions[1].TrueForAll(p => p), indigoManager.Papers.IsInserted });
-        TasksConditions.Add(new List<bool> { TasksConditions[2].TrueForAll(p => p), indigoManager.ImageSelectionManager.CurrentSelection != null });
+        TasksConditions.Add(new List<bool> { TasksConditions[2].TrueForAll(p => p), indigoManager.IsPrintStarted });
         TasksConditions.Add(new List<bool> { TasksConditions[3].TrueForAll(p => p), indigoManager.IsPrintFinished });
+        TasksConditions.Add(new List<bool> { TasksConditions[4].TrueForAll(p => p), false });
+
     }
 
     public void ChangeTask(int index)
