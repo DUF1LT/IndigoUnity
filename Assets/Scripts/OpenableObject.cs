@@ -16,9 +16,9 @@ public class OpenableObject : MonoBehaviour
     [SerializeField] private AudioClip OpenSound;
     [SerializeField] private AudioClip CloseSound;
 
+    public bool isOpen;
 
     Vector3 axis = Vector3.zero;
-    private bool isOpen;
     private bool isMoving;
     private float currentAngle = 0;
     private AudioSource source;

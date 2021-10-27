@@ -6,7 +6,7 @@ public class SelectionManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> Images;
 
-    private GameObject CurrentSelection;
+    public GameObject CurrentSelection;
 
     void Start()
     {

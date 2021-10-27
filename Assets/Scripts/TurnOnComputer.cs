@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TurnOnComputer : MonoBehaviour
 {
+    [SerializeField] private IndigoManager indigo;
+
     [SerializeField] Material TurnOffMaterial;
     [SerializeField] Material TurnOnMaterial;
     [SerializeField] GameObject Screen;
@@ -28,6 +30,7 @@ public class TurnOnComputer : MonoBehaviour
             IsComputerOn = true;
             source.PlayOneShot(TurnOnPC);
             source.PlayDelayed(1);
+            indigo.ConditionsChanged();
         }
         else
         {
@@ -35,6 +38,7 @@ public class TurnOnComputer : MonoBehaviour
             IsComputerOn = false;
             source.Stop();
             source.PlayOneShot(TurnOffPC);
+            indigo.ConditionsChanged();
         }
     }
 }
