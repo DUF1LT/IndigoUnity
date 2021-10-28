@@ -10,7 +10,7 @@ public class HighlightedObject : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (!EventSystem.current.IsPointerOverGameObject())
+        if (!EventSystem.current.IsPointerOverGameObject() && Cursor.lockState != CursorLockMode.Locked)
         {
             outline = gameObject.AddComponent<Outline>();
             outline.OutlineMode = Outline.Mode.OutlineAndSilhouette;
@@ -19,7 +19,6 @@ public class HighlightedObject : MonoBehaviour
         }
 
     }
-
 
     void OnMouseExit()
     {

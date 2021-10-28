@@ -13,6 +13,7 @@ public class SelectionManager : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<RectTransform>().transform.position = Images[0].transform.GetComponent<RectTransform>().position;
+        CurrentSelection = Textures[0];
     }
 
     public void ChangeSelectionTo(GameObject GameObject)

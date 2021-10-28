@@ -5,13 +5,26 @@ ScriptsOnlyBuild:
     - CameraManager
     - CameraRotate
     - HighlightedObject
+    - IndigoManager
+    - InsertableObject
     - OnUIHighlightObject
+    - OpenComputerUI
     - OpenableObject
+    - SelectableImage
+    - SelectionManager
+    - TaskDropdownManager
     - TaskManager
+    - TurnOnComputer
+    - UIManager
     Unity.CollabProxy.Editor.dll:
     - Unity.Cloud.Collaborate.UserInterface.CollaborateWindow
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -19,6 +32,7 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.Dropdown
     - UnityEngine.UI.GraphicRaycaster
@@ -48,11 +62,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -61,44 +81,72 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1486}
+      Script: {instanceID: 1514}
     - Class: 114
-      Script: {instanceID: 1574}
+      Script: {instanceID: 1602}
     - Class: 114
-      Script: {instanceID: 1662}
+      Script: {instanceID: 1690}
     - Class: 114
-      Script: {instanceID: 1960}
+      Script: {instanceID: 1728}
     - Class: 114
-      Script: {instanceID: 2236}
+      Script: {instanceID: 1950}
     - Class: 114
-      Script: {instanceID: 2336}
+      Script: {instanceID: 1976}
     - Class: 114
-      Script: {instanceID: 2482}
+      Script: {instanceID: 1982}
     - Class: 114
-      Script: {instanceID: 2648}
+      Script: {instanceID: 1992}
     - Class: 114
-      Script: {instanceID: 2664}
+      Script: {instanceID: 2066}
     - Class: 114
-      Script: {instanceID: 2672}
+      Script: {instanceID: 2272}
+    - Class: 114
+      Script: {instanceID: 2372}
+    - Class: 114
+      Script: {instanceID: 2400}
+    - Class: 114
+      Script: {instanceID: 2520}
     - Class: 114
       Script: {instanceID: 2686}
     - Class: 114
-      Script: {instanceID: 2758}
+      Script: {instanceID: 2702}
     - Class: 114
-      Script: {instanceID: 2988}
+      Script: {instanceID: 2710}
     - Class: 114
-      Script: {instanceID: 3162}
+      Script: {instanceID: 2724}
     - Class: 114
-      Script: {instanceID: 3266}
+      Script: {instanceID: 2782}
     - Class: 114
-      Script: {instanceID: 3404}
+      Script: {instanceID: 2796}
     - Class: 114
-      Script: {instanceID: 3524}
+      Script: {instanceID: 3028}
     - Class: 114
-      Script: {instanceID: 3796}
+      Script: {instanceID: 3202}
+    - Class: 114
+      Script: {instanceID: 3268}
+    - Class: 114
+      Script: {instanceID: 3308}
+    - Class: 114
+      Script: {instanceID: 3366}
+    - Class: 114
+      Script: {instanceID: 3448}
+    - Class: 114
+      Script: {instanceID: 3558}
+    - Class: 114
+      Script: {instanceID: 3568}
+    - Class: 114
+      Script: {instanceID: 3662}
+    - Class: 114
+      Script: {instanceID: 3842}
+    - Class: 114
+      Script: {instanceID: 3904}
+    - Class: 114
+      Script: {instanceID: 4290}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 154
       Script: {instanceID: 0}
@@ -107,6 +155,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -205,6 +257,18 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
+      Hash: cfbc9465969b413998a8230c81f08ec9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIManager
+  - hash:
+      serializedVersion: 2
+      Hash: 0edb4b31dac4f09b6880096303041941
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OpenComputerUI
+  - hash:
+      serializedVersion: 2
       Hash: 800c50acba124432abb4cf0d47202e06
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -223,10 +287,22 @@ ScriptsOnlyBuild:
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
+      Hash: 1bed67980e46d3557dc4344f02ae0b91
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TurnOnComputer
+  - hash:
+      serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: a1c9c049eb5826a352f7a8d9d61fe6a2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ClearSelection
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -263,6 +339,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: a1c9c049eb5826a352f7a8d9d61fe6a2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SelectableImage
   - hash:
       serializedVersion: 2
       Hash: 760787567e1b60d64a3e421ab83ee14a
@@ -331,7 +413,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: 8b9f252eba701683d44c1d40a31f4e91
+      Hash: df25696de1c1e754d3451a28b57b93cc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TaskManager
@@ -373,6 +455,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: b1920913e6f371e86a1eafdbb69a1761
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FinalImage
+  - hash:
+      serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -397,7 +485,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 2798f40eb0c8aaa51d4c85ebf3ce799b
+      Hash: 19ed34ed1e49031b456002758fbcb93c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraRotate
@@ -451,10 +539,16 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: ebf5c4c68c5506856a17be8aec184609
+      Hash: 55df9df638eaed07702a3d859d600a3b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OpenableObject
+  - hash:
+      serializedVersion: 2
+      Hash: 1b73c7da5ce6b07c2b570e12613e79de
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SelectionManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -481,6 +575,12 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
+      Hash: f7d12173ef2f7cd72f071d23b6baa00b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IndigoManager
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -503,6 +603,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: 4e4779fc26ab714c075cecc033647718
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InsertableObject
   - hash:
       serializedVersion: 2
       Hash: 908b3077da284d11de0450423ca1808e
@@ -587,6 +693,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: b3985a23a4d76a5f8c73f377cfcf6a2c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TaskDropdownManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/IndigoOffice.unity
