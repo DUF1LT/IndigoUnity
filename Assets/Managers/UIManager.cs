@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject GeneralUI;
     [SerializeField] GameObject ComputerUI;
     [SerializeField] GameObject ErrorPopup;
+    [SerializeField] GameObject HintPopup;
     [SerializeField] AudioClip ClickSound;
     [SerializeField] AudioClip ErrorSound;
     private AudioSource source;
@@ -29,6 +30,9 @@ public class UIManager : MonoBehaviour
         source.PlayOneShot(ClickSound);
         Camera.main.GetComponent<CameraRotate>().isInUI = false;
     }
+
+    public void OpenHint() => HintPopup.gameObject.SetActive(true);
+    public void CloseHint() => HintPopup.gameObject.SetActive(false);
 
     public void PrintButton()
     {

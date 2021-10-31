@@ -81,67 +81,67 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1514}
+      Script: {instanceID: 1520}
     - Class: 114
-      Script: {instanceID: 1602}
+      Script: {instanceID: 1608}
     - Class: 114
-      Script: {instanceID: 1690}
+      Script: {instanceID: 1696}
     - Class: 114
-      Script: {instanceID: 1728}
+      Script: {instanceID: 1734}
     - Class: 114
-      Script: {instanceID: 1950}
-    - Class: 114
-      Script: {instanceID: 1976}
+      Script: {instanceID: 1956}
     - Class: 114
       Script: {instanceID: 1982}
     - Class: 114
-      Script: {instanceID: 1992}
+      Script: {instanceID: 1988}
     - Class: 114
-      Script: {instanceID: 2066}
+      Script: {instanceID: 1998}
     - Class: 114
-      Script: {instanceID: 2272}
+      Script: {instanceID: 2072}
     - Class: 114
-      Script: {instanceID: 2372}
+      Script: {instanceID: 2278}
     - Class: 114
-      Script: {instanceID: 2400}
+      Script: {instanceID: 2378}
     - Class: 114
-      Script: {instanceID: 2520}
+      Script: {instanceID: 2406}
     - Class: 114
-      Script: {instanceID: 2686}
+      Script: {instanceID: 2526}
     - Class: 114
-      Script: {instanceID: 2702}
+      Script: {instanceID: 2692}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2708}
     - Class: 114
-      Script: {instanceID: 2724}
+      Script: {instanceID: 2716}
     - Class: 114
-      Script: {instanceID: 2782}
+      Script: {instanceID: 2730}
     - Class: 114
-      Script: {instanceID: 2796}
+      Script: {instanceID: 2788}
     - Class: 114
-      Script: {instanceID: 3028}
+      Script: {instanceID: 2802}
     - Class: 114
-      Script: {instanceID: 3202}
+      Script: {instanceID: 3034}
     - Class: 114
-      Script: {instanceID: 3268}
+      Script: {instanceID: 3208}
     - Class: 114
-      Script: {instanceID: 3308}
+      Script: {instanceID: 3274}
     - Class: 114
-      Script: {instanceID: 3366}
+      Script: {instanceID: 3314}
     - Class: 114
-      Script: {instanceID: 3448}
+      Script: {instanceID: 3372}
     - Class: 114
-      Script: {instanceID: 3558}
+      Script: {instanceID: 3454}
     - Class: 114
-      Script: {instanceID: 3568}
+      Script: {instanceID: 3564}
     - Class: 114
-      Script: {instanceID: 3662}
+      Script: {instanceID: 3574}
     - Class: 114
-      Script: {instanceID: 3842}
+      Script: {instanceID: 3668}
     - Class: 114
-      Script: {instanceID: 3904}
+      Script: {instanceID: 3848}
     - Class: 114
-      Script: {instanceID: 4290}
+      Script: {instanceID: 3910}
+    - Class: 114
+      Script: {instanceID: 4296}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -257,7 +257,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: cfbc9465969b413998a8230c81f08ec9
+      Hash: 4d3407f13a614891f73da7dc15f7e6c2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -485,7 +485,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 19ed34ed1e49031b456002758fbcb93c
+      Hash: 7d5af24f9ce18ef4b6a78327c31847f3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraRotate
@@ -575,7 +575,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: f7d12173ef2f7cd72f071d23b6baa00b
+      Hash: ab18a265983cc2d20a5d8257579a56e7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: IndigoManager

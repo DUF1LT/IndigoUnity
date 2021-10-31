@@ -28,6 +28,7 @@ public class IndigoManager : MonoBehaviour
 
     [Header("Particles")]
     [SerializeField] ParticleSystem InksParticles;
+    [SerializeField] ParticleSystem Lasers;
     [SerializeField] Material Cyan;
     [SerializeField] Material Magenta;
     [SerializeField] Material Yellow;
@@ -39,9 +40,10 @@ public class IndigoManager : MonoBehaviour
 
     [HideInInspector]
     public bool IsPrintFinished;
+    [HideInInspector]
     public bool IsPrintStarted;
 
-    private float RotationSpeed = 20f;
+    private float RotationSpeed = 40f;
     private Texture SelectedImage;
     private float PaperMoveSpeed = 0.5f;
 
@@ -89,6 +91,9 @@ public class IndigoManager : MonoBehaviour
     {
         yield return new WaitForSeconds(8f);
 
+        Lasers.Play();
+        yield return new WaitForSeconds(2f);
+
         InksParticles.GetComponent<Renderer>().material = Cyan;
         InksParticles.Play();
         yield return new WaitForSeconds(4f);
@@ -111,6 +116,8 @@ public class IndigoManager : MonoBehaviour
         InksParticles.GetComponent<Renderer>().material = Key;
         yield return new WaitForSeconds(4f);
         InksParticles.Stop();
+        Lasers.Stop();
+
         StartCoroutine(OffsetCylinderColoring());
         StartCoroutine(PaperMove());
     }
