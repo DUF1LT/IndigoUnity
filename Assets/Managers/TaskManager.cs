@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.IO;
 using System.Linq;
 using UnityEngine.EventSystems;
+using System;
 
 public class TaskManager : MonoBehaviour
 {
@@ -33,24 +34,14 @@ public class TaskManager : MonoBehaviour
         RefreshConditions();
     }
 
-    void Update()
+    IEnumerator AcceptTask()
     {
-        if (CurrentTaskIndex >= 1)
-        {
-            if (TasksConditions[CurrentTaskIndex - 1].TrueForAll(p => p))
-                IsDoneImage.gameObject.SetActive(true);
-            else
-                IsDoneImage.gameObject.SetActive(false);
+        yield return new WaitForSeconds(2f);
 
-            if (!TasksConditions[CurrentTaskIndex - 1][0])
-            {
-                TaskDropdown.value = CurrentTaskIndex - 1;
-                if (indigoManager.IsPrintStarted)
-                {
-                    indigoManager.StopPrint();
-                }
-            }
-        }
+        Debug.Log(CurrentTaskIndex);
+
+        TaskDropdown.value = ++CurrentTaskIndex;
+        RefreshConditions();
     }
 
     public void RefreshConditions()
@@ -71,6 +62,27 @@ public class TaskManager : MonoBehaviour
         TasksConditions.Add(new List<bool> { TasksConditions[3].TrueForAll(p => p), indigoManager.IsPrintFinished });
         TasksConditions.Add(new List<bool> { TasksConditions[4].TrueForAll(p => p), false });
 
+        if (CurrentTaskIndex >= 1)
+        {
+            if (TasksConditions[CurrentTaskIndex - 1].TrueForAll(p => p))
+            {
+                IsDoneImage.gameObject.SetActive(true);
+                Debug.Log("Current task");
+
+                StartCoroutine(AcceptTask());
+            }
+            else
+                IsDoneImage.gameObject.SetActive(false);
+
+            while (!TasksConditions[CurrentTaskIndex - 1][0])
+            {
+                TaskDropdown.value = CurrentTaskIndex - 1;
+                if (indigoManager.IsPrintStarted)
+                {
+                    indigoManager.StopPrint();
+                }
+            }
+        }
     }
 
     public void ChangeTask(int index)

@@ -51,6 +51,12 @@ public class CameraRotate : MonoBehaviour
             if (isCursorLocked)
             {
                 mouseY -= Input.GetAxis("Mouse Y");
+
+                if (mouseY < -5)
+                    mouseY = -5;
+                if (mouseY > 20)
+                    mouseY = 20;
+
                 ChangeDropdown();
 
                 transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * MouseSensitivity, Space.World);
