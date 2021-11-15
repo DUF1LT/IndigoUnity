@@ -156,6 +156,8 @@ public class IndigoManager : MonoBehaviour
         paper.GetComponent<FinalImage>().taskManager = GetComponent<TaskManager>();
 
         IsPrintFinished = true;
+
+        GetComponent<TableManager>().AddRecordToTable();
         GetComponent<AudioSource>().Stop();
         GetComponent<TaskManager>().RefreshConditions();
     }

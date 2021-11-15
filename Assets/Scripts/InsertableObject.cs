@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.EventSystems;
+using Cursor = UnityEngine.Cursor;
 
 public class InsertableObject : MonoBehaviour
 {
@@ -27,20 +28,22 @@ public class InsertableObject : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!IsInserted)
+        if (!EventSystem.current.IsPointerOverGameObject() && Cursor.lockState != CursorLockMode.Locked)
         {
-            mesh.material = InsertedMaterial;
-            IsInserted = true;
-            GetComponent<AudioSource>().PlayOneShot(InputSound);
-            indigo.ConditionsChanged();
-        }
-        else
-        {
-            mesh.material = NotInsertedMaterial;
-            IsInserted = false;
-            GetComponent<AudioSource>().PlayOneShot(PickUpSound);
-            indigo.ConditionsChanged();
+            if (!IsInserted)
+            {
+                mesh.material = InsertedMaterial;
+                IsInserted = true;
+                GetComponent<AudioSource>().PlayOneShot(InputSound);
+                indigo.ConditionsChanged();
+            }
+            else
+            {
+                mesh.material = NotInsertedMaterial;
+                IsInserted = false;
+                GetComponent<AudioSource>().PlayOneShot(PickUpSound);
+                indigo.ConditionsChanged();
+            }
         }
     }
-
 }

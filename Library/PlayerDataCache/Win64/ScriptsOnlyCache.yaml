@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - OpenableObject
     - SelectableImage
     - SelectionManager
+    - TableManager
     - TaskDropdownManager
     - TaskManager
     - TurnOnComputer
@@ -142,6 +143,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3904}
     - Class: 114
       Script: {instanceID: 4290}
+    - Class: 114
+      Script: {instanceID: 53086}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -257,7 +260,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: 4d3407f13a614891f73da7dc15f7e6c2
+      Hash: 591cca72b97cc94fa7a61b9e30d18244
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -699,6 +702,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TaskDropdownManager
+  - hash:
+      serializedVersion: 2
+      Hash: c575071a6f03e967703a194965f1f01e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TableManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/IndigoOffice.unity

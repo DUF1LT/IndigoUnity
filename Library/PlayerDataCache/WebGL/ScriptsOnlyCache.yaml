@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - OpenableObject
     - SelectableImage
     - SelectionManager
+    - TableManager
     - TaskDropdownManager
     - TaskManager
     - TurnOnComputer
@@ -81,67 +82,69 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1520}
+      Script: {instanceID: 1514}
     - Class: 114
-      Script: {instanceID: 1608}
+      Script: {instanceID: 1602}
     - Class: 114
-      Script: {instanceID: 1696}
+      Script: {instanceID: 1690}
     - Class: 114
-      Script: {instanceID: 1734}
+      Script: {instanceID: 1728}
     - Class: 114
-      Script: {instanceID: 1956}
+      Script: {instanceID: 1884}
     - Class: 114
-      Script: {instanceID: 1982}
+      Script: {instanceID: 1952}
     - Class: 114
-      Script: {instanceID: 1988}
+      Script: {instanceID: 1978}
     - Class: 114
-      Script: {instanceID: 1998}
+      Script: {instanceID: 1984}
     - Class: 114
-      Script: {instanceID: 2072}
+      Script: {instanceID: 1994}
     - Class: 114
-      Script: {instanceID: 2278}
+      Script: {instanceID: 2068}
     - Class: 114
-      Script: {instanceID: 2378}
+      Script: {instanceID: 2274}
     - Class: 114
-      Script: {instanceID: 2406}
+      Script: {instanceID: 2374}
     - Class: 114
-      Script: {instanceID: 2526}
+      Script: {instanceID: 2402}
     - Class: 114
-      Script: {instanceID: 2692}
+      Script: {instanceID: 2522}
     - Class: 114
-      Script: {instanceID: 2708}
+      Script: {instanceID: 2688}
     - Class: 114
-      Script: {instanceID: 2716}
+      Script: {instanceID: 2704}
     - Class: 114
-      Script: {instanceID: 2730}
+      Script: {instanceID: 2712}
     - Class: 114
-      Script: {instanceID: 2788}
+      Script: {instanceID: 2726}
     - Class: 114
-      Script: {instanceID: 2802}
+      Script: {instanceID: 2784}
     - Class: 114
-      Script: {instanceID: 3034}
+      Script: {instanceID: 2798}
     - Class: 114
-      Script: {instanceID: 3208}
+      Script: {instanceID: 3030}
     - Class: 114
-      Script: {instanceID: 3274}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 3314}
+      Script: {instanceID: 3272}
     - Class: 114
-      Script: {instanceID: 3372}
+      Script: {instanceID: 3312}
     - Class: 114
-      Script: {instanceID: 3454}
+      Script: {instanceID: 3370}
     - Class: 114
-      Script: {instanceID: 3564}
+      Script: {instanceID: 3452}
     - Class: 114
-      Script: {instanceID: 3574}
+      Script: {instanceID: 3562}
     - Class: 114
-      Script: {instanceID: 3668}
+      Script: {instanceID: 3572}
     - Class: 114
-      Script: {instanceID: 3848}
+      Script: {instanceID: 3666}
     - Class: 114
-      Script: {instanceID: 3910}
+      Script: {instanceID: 3846}
     - Class: 114
-      Script: {instanceID: 4296}
+      Script: {instanceID: 3908}
+    - Class: 114
+      Script: {instanceID: 4294}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -251,13 +254,19 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: c575071a6f03e967703a194965f1f01e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TableManager
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: 4d3407f13a614891f73da7dc15f7e6c2
+      Hash: 591cca72b97cc94fa7a61b9e30d18244
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
